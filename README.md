@@ -5,12 +5,29 @@
 # Open-H Initiative: Data Contribution How-To Guide
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Y8NWgdZz)
-[![LeRobot](https://img.shields.io/badge/Format-LeRobot%20v2.1-FF6B6B?style=for-the-badge)](https://docs.phospho.ai/learn/lerobot-dataset)
+[![LeRobot](https://img.shields.io/badge/LeRobot-v0.3.3-FF6B6B?style=for-the-badge)](https://docs.phospho.ai/learn/lerobot-dataset)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-4CAF50?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 
 </div>
 
 This guide provides a comprehensive overview of how to contribute meaningful data to the Open-H initiative, ensuring consistency and quality across all contributions.
+
+## 🚀 LeRobot Installation
+
+Before using the conversion scripts and following this guide, you need to install the correct version of LeRobot:
+
+### Required Version: LeRobot v0.3.3
+
+```bash
+pip install lerobot==0.3.3
+```
+
+### Version Clarification
+
+- **LeRobot Package Version**: v0.3.3 (the Python library)
+- **LeRobot Dataset Format**: v2.1 (the data structure specification)
+
+These are separate versioning schemes. This guide uses LeRobot package v0.3.3 which supports the LeRobot dataset format v2.1.
 
 ## 📊 Data Formatting: Overview
 
@@ -205,8 +222,9 @@ ultrasound_dataset = LeRobotDataset.create(
             "names": ["tx_m", "ty_m", "tz_m", "qx", "qy", "qz", "qw"],
         }
     },
-    image_writer_threads=10,
-    image_writer_processes=5,
+    image_writer_processes=16,
+    image_writer_threads=20,
+    tolerance_s=0.1,
 )
 ```
 
@@ -293,6 +311,14 @@ If you have existing datasets in other formats, use the following code snippets 
 ### Zarr to LeRobot Conversion
 
 [zarr_to_lerobot.py](scripts/conversion/zarr_to_lerobot.py)
+
+### DVRK Dataset Conversion
+
+[dvrk_zarr_to_lerobot.py](scripts/conversion/dvrk_zarr_to_lerobot.py)
+
+### ⚡ Performance Optimization
+
+For large datasets, conversion performance can be significantly improved using parallel processing parameters. The `image_writer_processes` and `image_writer_threads` parameters can reduce conversion time by up to 3x. See the [conversion scripts documentation](scripts/conversion/README.md) for detailed configuration guidance.
 
 ## 📚 Additional Resources
 

@@ -6,7 +6,7 @@ from pathlib import Path
 import h5py
 import tqdm
 
-from lerobot.common.datasets.lerobot_dataset import LeRobotDataset
+from lerobot.datasets.lerobot_dataset import LeRobotDataset
 from lerobot.datasets.utils import write_info
 
 
@@ -41,6 +41,7 @@ def main():
     # -----------------------
     dataset = LeRobotDataset.create(
         repo_id="my_robot_dataset",
+        use_videos=True,
         fps=30,
         features={
             "image": {"dtype": "video", "shape": (224, 224, 3), "names": ["h", "w", "c"]},
@@ -49,6 +50,9 @@ def main():
             "action": {"dtype": "float32", "shape": (6,), "names": ["x", "y", "z", "roll", "pitch", "yaw"]},
         },
         robot_type="panda",
+        image_writer_processes=16,
+        image_writer_threads=20,
+        tolerance_s=0.1,
     )
 
     # -------------------------------

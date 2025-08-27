@@ -37,7 +37,8 @@ import h5py
 import tqdm
 import tyro
 
-from lerobot.common.datasets.lerobot_dataset import LeRobotDataset, LEROBOT_HOME
+from lerobot.datasets.lerobot_dataset import LeRobotDataset
+from lerobot.constants import HF_LEROBOT_HOME
 
 
 def convert_data_to_lerobot(data_dir: Path, repo_id: str, *, push_to_hub: bool = False):
@@ -49,14 +50,14 @@ def convert_data_to_lerobot(data_dir: Path, repo_id: str, *, push_to_hub: bool =
         repo_id: The repository ID for the dataset on the Hugging Face Hub.
         push_to_hub: Whether to push the dataset to the Hub after conversion.
     """
-    final_output_path = LEROBOT_HOME / repo_id
+    final_output_path = os.path.join(HF_LEROBOT_HOME, repo_id)
     if final_output_path.exists():
         print(f"Removing existing dataset at {final_output_path}")
         shutil.rmtree(final_output_path)
 
     dataset = LeRobotDataset.create(
         repo_id=repo_id,
-        video=True,
+        use_videos=True,
         robot_type="panda",
         fps=30,
         features={
@@ -81,6 +82,9 @@ def convert_data_to_lerobot(data_dir: Path, repo_id: str, *, push_to_hub: bool =
                 "names": ["x", "y", "z", "roll", "pitch", "yaw"],
             },
         },
+        image_writer_processes=16,
+        image_writer_threads=20,
+        tolerance_s=0.1,
     )
 
     hdf5_files = sorted(glob.glob(os.path.join(data_dir, "*.hdf5")))
