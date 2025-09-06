@@ -331,6 +331,18 @@ For large datasets, conversion performance can be significantly improved using p
 
 We welcome contributions from the community! Please ensure your data follows the guidelines outlined in this document and includes proper documentation using our [dataset template](templates/dataset_template.md).
 
+### ✅ Dataset Validation
+
+Before submitting your dataset, run the provided validation script to ensure compliance with Open-H and LeRobot standards. This local script checks for correct directory structure, metadata, data quality, and more.
+
+To run the validation script:
+
+```bash
+python scripts/validation/validate_formatting.py /path/to/your/dataset
+```
+
+This tool helps identify common issues before submission and ensures your dataset can be easily integrated.
+
 ### Get Help & Connect
 
 - 💬 **Join our Discord**: [discord.gg/Y8NWgdZz](https://discord.gg/Y8NWgdZz) - Connect with other contributors, ask questions, and share your progress
