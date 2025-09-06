@@ -74,17 +74,17 @@ def convert_data_to_lerobot(data_path: Path, repo_id: str, *, push_to_hub: bool 
         robot_type="panda",
         fps=30,
         features={
-            "image": {
+            "observation.image": {
                 "dtype": "video",
                 "shape": (224, 224, 3),
                 "names": ["height", "width", "channel"],
             },
-            "wrist_image": {
+            "observation.wrist_image": {
                 "dtype": "video",
                 "shape": (224, 224, 3),
                 "names": ["height", "width", "channel"],
             },
-            "state": {
+            "observation.state": {
                 "dtype": "float32",
                 "shape": (7,),
                 "names": ["joint_1", "joint_2", "joint_3", "joint_4", "joint_5", "joint_6", "joint_7"],
@@ -127,9 +127,9 @@ def convert_data_to_lerobot(data_path: Path, repo_id: str, *, push_to_hub: bool 
             # Add each frame from the current episode slice to the dataset buffer.
             for step_idx in range(start_idx, end_idx):
                 frame_data = {
-                    "image": root_zarr["observations/rgb"][step_idx][0],
-                    "wrist_image": root_zarr["observations/rgb"][step_idx][1],
-                    "state": root_zarr["abs_joint_pos"][step_idx],
+                    "observation.image": root_zarr["observations/rgb"][step_idx][0],
+                    "observation.wrist_image": root_zarr["observations/rgb"][step_idx][1],
+                    "observation.state": root_zarr["abs_joint_pos"][step_idx],
                     "action": root_zarr["action"][step_idx],
                 }
                 timestamp = root_zarr["timestep"][step_idx]

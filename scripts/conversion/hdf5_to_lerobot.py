@@ -61,17 +61,17 @@ def convert_data_to_lerobot(data_dir: Path, repo_id: str, *, push_to_hub: bool =
         robot_type="panda",
         fps=30,
         features={
-            "image": {
+            "observation.image": {
                 "dtype": "video",
                 "shape": (224, 224, 3),
                 "names": ["height", "width", "channel"],
             },
-            "wrist_image": {
+            "observation.wrist_image": {
                 "dtype": "video",
                 "shape": (224, 224, 3),
                 "names": ["height", "width", "channel"],
             },
-            "state": {
+            "observation.state": {
                 "dtype": "float32",
                 "shape": (7,),
                 "names": ["joint_1", "joint_2", "joint_3", "joint_4", "joint_5", "joint_6", "joint_7"],
@@ -110,9 +110,9 @@ def convert_data_to_lerobot(data_dir: Path, repo_id: str, *, push_to_hub: bool =
                 # Add each frame from the episode to the internal buffer.
                 for step in range(num_steps):
                     frame_data = {
-                        "image": f[f"{root_name}/observations/rgb"][step],
-                        "wrist_image": f[f"{root_name}/observations/rgb"][step],
-                        "state": f[f"{root_name}/abs_joint_pos"][step],
+                        "observation.image": f[f"{root_name}/observations/rgb"][step],
+                        "observation.wrist_image": f[f"{root_name}/observations/rgb"][step],
+                        "observation.state": f[f"{root_name}/abs_joint_pos"][step],
                         "action": f[f"{root_name}/action"][step],
                     }
                     timestamp = f[f"{root_name}/timestep"][step]
