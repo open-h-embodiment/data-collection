@@ -134,7 +134,7 @@ surgical_dataset = LeRobotDataset.create(
         "observation.meta.tool": {
             "dtype": "string",
             "shape": (1,),
-            "names": ["value"],
+            "names": ["debakey_forceps"],
         },
         # Episode-level instructions can be easily included during dataset creation using
         # dataset.add_episode(..., task="task here"). However, some procedures require

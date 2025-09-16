@@ -26,7 +26,7 @@ This file helps others understand the context and details of your contribution.
 | :--- | :--- |
 | **Total Trajectories** | `[Number]` |
 | **Total Hours** | `[Number]` |
-| **Data Type** | `[ ] Clinical` `[ ] Ex-Vivo` `[ ] Table-Top Phantom` `[ ] Digital Simulation` `[ ] Physical Simulation` `[ ] Other (If checked, update "Other") [ ]` |
+| **Data Type** | `[ ] Clinical` `[ ] Ex-Vivo` `[ ] Table-Top Phantom` `[ ] Digital Simulation` `[ ] Physical Simulation` `[ ] Other (If checked, update "Other")` |
 | **License** | CC BY 4.0 |
 | **Version** | `[e.g., 1.0]` |
 
