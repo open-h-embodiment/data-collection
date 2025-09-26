@@ -33,7 +33,7 @@ This guide provides a comprehensive overview of how to contribute meaningful dat
 
 ## 🚀 LeRobot Installation
 
-Before using the conversion scripts and following this guide, you need to install the correct version of LeRobot:
+Before using the conversion scripts and following this dataset preparation guide, you need to install the correct version of LeRobot:
 
 ### Required Version: LeRobot v0.3.3
 
