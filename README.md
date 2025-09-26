@@ -18,7 +18,7 @@ This guide provides a comprehensive overview of how to contribute meaningful dat
    Read the [Open-H RFP](assets/open-h-rfp.pdf) to confirm your proposed dataset aligns with the initiative. The guide outlines the technical scope, eligibility, and evaluation criteria for the one-page submission reviewed by the Open-H-Embodiment steering committee.
 
 2. **Prepare and Submit Your Proposal**  
-   Develop a concise one-page summary describing the dataset, collection methodology, and anticipated impact. Follow the instructions in the RFP and submit the document for steering committee review.
+   Develop a concise one-page summary describing the dataset, collection methodology, as well as your particular tasks. Follow the instructions in the RFP and submit the document for steering committee review.
 
 3. **Upload Your Approved Dataset**  
    After approval, upload your data to the [Open-H shared drive](https://drive.google.com/drive/folders/1fenrjbsSYaeLz-U_LD7K063oT2el8ueX?usp=sharing). 
