@@ -12,6 +12,25 @@
 
 This guide provides a comprehensive overview of how to contribute meaningful data to the Open-H initiative, ensuring consistency and quality across all contributions.
 
+## How to Participate
+
+1. **Review the Request for Proposals**  
+   Read the [Open-H RFP](assets/open-h-rfp.pdf) to confirm your proposed dataset aligns with the initiative. The guide outlines the technical scope, eligibility, and evaluation criteria for the one-page submission reviewed by the Open-H-Embodiment steering committee.
+
+2. **Prepare and Submit Your Proposal**  
+   Develop a concise one-page summary describing the dataset, collection methodology, and anticipated impact. Follow the instructions in the RFP and submit the document for steering committee review.
+
+3. **Upload Your Approved Dataset**  
+   After approval, upload your data to the [Open-H shared drive](https://drive.google.com/drive/folders/1fenrjbsSYaeLz-U_LD7K063oT2el8ueX?usp=sharing). 
+   
+   A dedicated folder will be provisioned for your institution (and each participating lab, if applicable) to keep contributions organized.
+
+4. **Register Dataset Details**  
+   Record the dataset metadata, documentation links, and key contacts in the [dataset tracking sheet](https://docs.google.com/spreadsheets/d/1vG9778S6G-Embum9ZjK_NlZGR0KFa2VkMnGDnZB-Exk/edit?usp=sharing). 
+   
+   This ensures the community can discover and integrate your contribution.
+
+
 ## 🚀 LeRobot Installation
 
 Before using the conversion scripts and following this guide, you need to install the correct version of LeRobot:
