@@ -4,7 +4,7 @@
 
 # Open-H Initiative: Data Contribution How-To Guide
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Y8NWgdZz)
+[![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/YZEhNcTHtc)
 [![LeRobot](https://img.shields.io/badge/LeRobot-v0.3.3-FF6B6B?style=for-the-badge)](https://docs.phospho.ai/learn/lerobot-dataset)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-4CAF50?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -364,7 +364,7 @@ This tool helps identify common issues before submission and ensures your datase
 
 ### Get Help & Connect
 
-- 💬 **Join our Discord**: [discord.gg/Y8NWgdZz](https://discord.gg/Y8NWgdZz) - Connect with other contributors, ask questions, and share your progress
+- 💬 **Join our Discord**: [discord.gg/YZEhNcTHtc](https://discord.gg/YZEhNcTHtc) - Connect with other contributors, ask questions, and share your progress
 - 🐛 **Report Issues**: Open an issue in this repository for bugs or feature requests
 - 📧 **Direct Support**: Reach out through Discord for immediate assistance
 
