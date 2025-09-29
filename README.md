@@ -14,7 +14,7 @@ This guide provides a comprehensive overview of how to contribute meaningful dat
 
 ## How to Participate
 
-1. **Review the Request for Proposals**  (If you have not previously spoken directly with Open-H team members about your submission)
+1. **Review the Request for Proposals** 
    Read the [Open-H RFP](assets/open-h-rfp.pdf) to confirm your proposed dataset aligns with the initiative. The guide outlines the technical scope, eligibility, and evaluation criteria for the one-page submission reviewed by the Open-H-Embodiment steering committee.
 
 2. **Prepare and Submit Your Proposal**  
